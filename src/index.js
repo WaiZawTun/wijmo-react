@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import './App.css'
+import Basic from './App';
+import OData from './OData'
 import reportWebVitals from './reportWebVitals';
+import VirtualOData from './virtualOData';
+import InfiniteScroll from './InfiniteScroll';
+import UnboundGrid from './unboundGrid';
+import ColumnWidth from './column/width/Width';
+// import EditableRedux from './redux/app';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('app'))
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <div>
+    <Basic />
+    <OData />
+    <VirtualOData />
+    <InfiniteScroll />
+    <UnboundGrid />
+    {/* <EditableRedux /> */}
+    <ColumnWidth />
+  </div>
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
